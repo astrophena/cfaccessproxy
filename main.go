@@ -1,3 +1,7 @@
+// © 2020 Ilya Mateyko. All rights reserved.
+// Use of this source code is governed by the MIT
+// license that can be found in the LICENSE.md file.
+
 /*
        __
   ___ / _| __ _  ___ ___ ___  ___ ___ _ __  _ __ _____  ___   _
