@@ -8,9 +8,7 @@
 */
 
 // cfaccessproxy is a Cloudflare Access companion proxy.
-//
-// It redirects to the canonical URL and checks JWTs issued
-// by Cloudflare Access.
+// See README.md for documentation.
 package main
 
 import (
