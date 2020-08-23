@@ -22,11 +22,9 @@
 | CFACCESSPROXY_LISTEN_ADDR | Network address to listen on. |
 | CFACCESSPROXY_CANONICAL_URL | Canonical URL to redirect. |
 | CFACCESSPROXY_UPSTREAM | URL to proxy requests after JWT check. |
-| CFACCESSPROXY_AUTH_DOMAIN | Cloudflare Access domain (e. g.
-\*.cloudflareaccess.com). |
+| CFACCESSPROXY_AUTH_DOMAIN | Cloudflare Access domain (e. g. \*.cloudflareaccess.com). |
 | CFACCESSPROXY_POLICY_AUD | Application AUD from Cloudflare Access. |
-| CFACCESSPROXY_BYPASS_URL_PREFIXES | Comma-separated list of prefixes
-that should bypass JWT check. |
+| CFACCESSPROXY_BYPASS_URL_PREFIXES | Comma-separated list of prefixes that should bypass JWT check. |
 
 4. Start **cfaccessproxy**:
 
