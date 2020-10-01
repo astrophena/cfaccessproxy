@@ -2,7 +2,7 @@
   <h1>cfaccessproxy</h1>
 </div>
 
-**cfaccessproxy** is a [Cloudflare Access](https://developers.cloudflare.com/access/) companion proxy.
+Simple reverse proxy that authenticates Cloudflare Access requests.
 
 ## Installation
 
