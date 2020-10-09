@@ -10,7 +10,7 @@ Simple reverse proxy that authenticates Cloudflare Access requests.
 
 2. Then run:
 
-        $ go get github.com/astrophena/cfaccessproxy
+        $ go get go.astrophena.name/cfaccessproxy
 
    **cfaccessproxy** should be installed in your `$GOBIN` (e. g.
    `~/go/bin`).

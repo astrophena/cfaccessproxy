@@ -1,6 +1,6 @@
-module github.com/astrophena/cfaccessproxy
+module go.astrophena.name/cfaccessproxy
 
-go 1.14
+go 1.15
 
 require (
 	github.com/coreos/go-oidc v2.2.1+incompatible

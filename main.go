@@ -2,18 +2,9 @@
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE.md file.
 
-/*
-       __
-  ___ / _| __ _  ___ ___ ___  ___ ___ _ __  _ __ _____  ___   _
- / __| |_ / _` |/ __/ __/ _ \/ __/ __| '_ \| '__/ _ \ \/ / | | |
-| (__|  _| (_| | (_| (_|  __/\__ \__ \ |_) | | | (_) >  <| |_| |
- \___|_|  \__,_|\___\___\___||___/___/ .__/|_|  \___/_/\_\\__, |
-                                     |_|                  |___/
-*/
-
-// cfaccessproxy is a Cloudflare Access companion proxy.
-// See README.md for documentation.
-package main
+// Command cfaccessproxy is a simple reverse proxy that
+// authenticates Cloudflare Access requests.
+package main // import "go.astrophena.name/cfaccessproxy"
 
 import (
 	"context"
