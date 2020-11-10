@@ -5,10 +5,6 @@
 version: 2
 updates:
 - package-ecosystem: gomod
-  directory: "/"
+  directory: /
   schedule:
-    interval: "monthly"
-  reviewers:
-  - astrophena
-  assignees:
-  - astrophena
+    interval: monthly
