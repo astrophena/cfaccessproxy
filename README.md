@@ -20,7 +20,7 @@
 
 ## Configuration
 
-`cfaccessproxy` is configured by environment variables.
+`cfaccessproxy` is configured via environment variables.
 
 | Name | Description |
 | ---- | ----------- |
@@ -36,6 +36,6 @@
 [MIT] © [Ilya Mateyko]
 
 [Cloudflare Access]: https://www.cloudflare.com/teams/access/
-[Go]: https://golang.org
+[Go]: https://golang.org/dl
 [MIT]: LICENSE.md
 [Ilya Mateyko]: https://astrophena.name
