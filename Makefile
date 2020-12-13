@@ -1,25 +1,14 @@
-# © 2020 Ilya Mateyko. All rights reserved.
-# Use of this source code is governed by the MIT
-# license that can be found in the LICENSE.md file.
+GOOS ?= $(shell go env GOOS)
+GOARCH ?= $(shell go env GOARCH)
+LDFLAGS = "-s -w -buildid="
 
-PREFIX  ?= $(HOME)
-
-BIN     = cfaccessproxy
-BINDIR  = $(PREFIX)/bin
-
-LDFLAGS = "-s -w"
-
-.PHONY: build install clean help
+.PHONY: build clean help
 
 build: ## Build
-	@ CGO_ENABLED=0 go build -o $(BIN) -trimpath -ldflags=$(LDFLAGS)
-
-install: build ## Install
-	@ mkdir -m755 -p $(BINDIR) && \
-		install -m755 $(BIN) $(BINDIR)
+	@ GOOS=$(GOOS) GOARCH=$(GOARCH) CGO_ENABLED=0 go build -trimpath -ldflags=$(LDFLAGS)
 
 clean: ## Clean
-	@ rm -f $(BIN)
+	@ go clean
 
 help: ## Show help
 	@ grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
