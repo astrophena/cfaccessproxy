@@ -19,7 +19,7 @@ archives:
 dockers:
   - image_templates:
       - "docker.pkg.github.com/astrophena/cfaccessproxy/distroless:latest"
-      - "docker.pkg.github.com/astrophena/cfaccessproxy/distroless:${{ .Tag }}"
+      - "docker.pkg.github.com/astrophena/cfaccessproxy/distroless:{{ .Tag }}"
 checksum:
   name_template: "checksums.txt"
 snapshot:
