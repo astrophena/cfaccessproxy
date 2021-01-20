@@ -44,7 +44,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	h := handlers.CanonicalHost(p.Upstream, http.StatusMovedPermanently)
+	h := handlers.CanonicalHost(p.BaseURL, http.StatusMovedPermanently)
 	srv := &http.Server{
 		Addr:         p.Addr,
 		WriteTimeout: time.Second * 15,
