@@ -16,6 +16,10 @@ jobs:
         uses: actions/setup-go@v2.1.3
         with:
           go-version: 1.15
+      - name: Login to Docker Registry
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | \
+          docker login docker.pkg.github.com -u docker --password-stdin
       - name: Release
         uses: goreleaser/goreleaser-action@v2.4.1
         with:
