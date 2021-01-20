@@ -8,6 +8,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"log"
 	"net/http"
@@ -24,8 +25,19 @@ import (
 	"github.com/kelseyhightower/envconfig"
 )
 
+// Version is a version of cfaccessproxy.
+var Version = "HEAD"
+
 func main() {
 	log.SetFlags(0)
+
+	showVersion := flag.Bool("version", false, "show version")
+	flag.Parse()
+
+	if *showVersion {
+		fmt.Fprintf(os.Stderr, "%s\n", Version)
+		os.Exit(0)
+	}
 
 	p, err := newProxy()
 	if err != nil {

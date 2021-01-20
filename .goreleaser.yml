@@ -1,0 +1,23 @@
+project_name: cfaccessproxy
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+    # Keep these synced with Makefile.
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.Version={{.Version}} -buildid=
+archives:
+  - format: binary
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  # Keep this synced with Makefile.
+  name_template: "{{ .Tag }}-next"

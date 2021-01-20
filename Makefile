@@ -1,6 +1,7 @@
 GOOS ?= $(shell go env GOOS)
 GOARCH ?= $(shell go env GOARCH)
-LDFLAGS = "-s -w -buildid="
+VERSION ?= $(shell git describe --abbrev=0 --tags | cut -c 2-)-next
+LDFLAGS = "-s -w -X main.Version=$(VERSION) -buildid="
 
 .PHONY: build clean help
 
