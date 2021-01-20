@@ -19,9 +19,9 @@ archives:
 dockers:
   - image_templates:
       - "docker.pkg.github.com/astrophena/cfaccessproxy/distroless:latest"
-      - "docker.pkg.github.com/astrophena/cfaccessproxy/distroless:{{ .Tag }}"
+      - "docker.pkg.github.com/astrophena/cfaccessproxy/distroless:{{ .Version }}"
 checksum:
   name_template: "checksums.txt"
 snapshot:
   # Keep this synced with Makefile.
-  name_template: "{{ .Tag }}-next"
+  name_template: "{{ .Version }}-next"
