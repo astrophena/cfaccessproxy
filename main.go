@@ -102,6 +102,7 @@ type proxy struct {
 	AuthDomain     string   `required:"true" split_words:"true"`
 	PolicyAUD      string   `required:"true" split_words:"true"`
 	BypassPrefixes []string `split_words:"true"`
+	LogoutRedirect bool     `split_words:"true"`
 
 	proxy    *httputil.ReverseProxy
 	verifier *oidc.IDTokenVerifier
@@ -130,6 +131,11 @@ func (p *proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	_, err := p.verifier.Verify(r.Context(), jwt)
 	if err != nil {
 		http.Error(w, "Invalid token.", http.StatusUnauthorized)
+		return
+	}
+
+	if p.LogoutRedirect && r.URL.Path == "/logout" {
+		http.Redirect(w, r, p.AuthDomain+"/cdn-cgi/access/logout", http.StatusFound)
 		return
 	}
 
