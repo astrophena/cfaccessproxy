@@ -30,7 +30,7 @@
 | `CFACCESSPROXY_AUTH_DOMAIN`     | Cloudflare Access domain (e. g. \*.cloudflareaccess.com) (_required_).          |
 | `CFACCESSPROXY_POLICY_AUD`      | Application AUD from Cloudflare Access (_required_).                            |
 | `CFACCESSPROXY_BYPASS_PREFIXES` | Comma-separated list of URL prefixes that should bypass JWT check (_optional_). |
-| `CFACCESSPROXY_LOGOUT_REDIRECT` | Whether to redirect `/logout` to Cloudflare Access logout. (false by default).  |
+| `CFACCESSPROXY_LOGOUT_REDIRECT` | Whether to redirect `/logout` to Cloudflare Access logout (false by default).  |
 
 ## License
 
